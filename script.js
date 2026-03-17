@@ -71,18 +71,21 @@ const potogas = [
     { name: "بوتاجاز ريال تك ", desc: "", img: "imgs/بوتوجازات/بوتاجاز ريال تك REAL TECH روك أسود ستيل أمان كامل .jpeg"},
     { name: "غسالة سامسونج", desc: "ديجيتال إنفرتر حديثة", img: "imgs/dashboard.PNG" }
 ];
-const phonesData = [
-    { name: "آيفون 15", desc: "مساحة 256 جيجا لون أسود", img: "imgs/Clock2.PNG"},
-    { name: "آيفون 15", desc: "مساحة 256 جيجا لون أسود", img: "imgs/Clock2.PNG"},
-    { name: "آيفون 15", desc: "مساحة 256 جيجا لون أسود", img: "imgs/Clock2.PNG"},
-    { name: "آيفون 15", desc: "مساحة 256 جيجا لون أسود", img: "imgs/Clock2.PNG"},
-    { name: "آيفون 15", desc: "مساحة 256 جيجا لون أسود", img: "imgs/Clock2.PNG"},
-    { name: "آيفون 15", desc: "مساحة 256 جيجا لون أسود", img: "imgs/Clock2.PNG"},
-    { name: "آيفون 15", desc: "مساحة 256 جيجا لون أسود", img: "imgs/Clock2.PNG"},
-    { name: "آيفون 15", desc: "مساحة 256 جيجا لون أسود", img: "imgs/Clock2.PNG"},
-    { name: "آيفون 15", desc: "مساحة 256 جيجا لون أسود", img: "imgs/Clock2.PNG"},
-    { name: "آيفون 15", desc: "مساحة 256 جيجا لون أسود", img: "imgs/Clock2.PNG"},
 
+
+const shashah = [
+    { name: "شاشة LG ", desc: "", img: "imgs/شاشات/شاشه ال جي 65 بوصه سمارت .jpeg"},
+    { name: "غسالة سامسونج", desc: "ديجيتال إنفرتر حديثة", img: "imgs/dashboard.PNG" }
+];
+const phonesData = [
+    { name: "سامسونج S23", desc: "كاميرا احترافية وشاشة ممتازة", img: "imgs/سبحة.jpg" },
+    { name: "سامسونج S23", desc: "كاميرا احترافية وشاشة ممتازة", img: "imgs/سبحة.jpg" },
+    { name: "سامسونج S23", desc: "كاميرا احترافية وشاشة ممتازة", img: "imgs/سبحة.jpg" },
+    { name: "سامسونج S23", desc: "كاميرا احترافية وشاشة ممتازة", img: "imgs/سبحة.jpg" },
+    { name: "سامسونج S23", desc: "كاميرا احترافية وشاشة ممتازة", img: "imgs/سبحة.jpg" },
+    { name: "سامسونج S23", desc: "كاميرا احترافية وشاشة ممتازة", img: "imgs/سبحة.jpg" },
+    { name: "سامسونج S23", desc: "كاميرا احترافية وشاشة ممتازة", img: "imgs/سبحة.jpg" },
+    { name: "سامسونج S23", desc: "كاميرا احترافية وشاشة ممتازة", img: "imgs/سبحة.jpg" },
     { name: "سامسونج S23", desc: "كاميرا احترافية وشاشة ممتازة", img: "imgs/سبحة.jpg" }
 ];
 
@@ -116,6 +119,7 @@ window.onload = () => {
     displayProducts(fridgeData, 'refrigerators-container');
     displayProducts(washersData, 'washers-container');
     displayProducts(potogas, 'potogas');
+    displayProducts(shashah, 'shashah');
 
     displayProducts(phonesData, 'phones-container');
 };
