@@ -308,7 +308,7 @@ cursor: pointer;
 
 
 @media (max-width: 600px) {
-    *{
+    body{
     overflow-x: hidden;
 }
 nav{
@@ -317,10 +317,11 @@ nav{
     display: block;
     height: 60px;
     padding: 10px;
+    position: sticky;
+    z-index: 600;
+    top:0;
 }
-nav ul{
-    /* display: block; */
-}
+
 nav ul span{
 font-size: 30px;
 
@@ -342,6 +343,9 @@ font-size: 30px;
 .newlinks{
     display: block;
     text-align: center;
+       position: sticky;
+    z-index: 600;
+    top:0;
 }
 .newlinks li a{
     color: rgb(11, 83, 238);
@@ -449,6 +453,8 @@ gap: 3px;
   color: #292727;
   font-size: 15px;
 height: 45px;
+    overflow-x: scroll;
+
 }
 
 h3{
