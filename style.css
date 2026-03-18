@@ -259,7 +259,7 @@ height: 50px;
 justify-self: center;
 align-items: center;
 justify-content: center;
-    background-color: #6090f7;
+    background-color: #5f8cec;
 font-size: 35px;
 color:white;
 border-radius: 3px;
@@ -452,7 +452,7 @@ h3{
     display: none;
 }
 .part_name{
-    background-color: #4248f1;
+    background-color: rgb(166, 169, 247);
 }
 @keyframes part_name {
 0%{
