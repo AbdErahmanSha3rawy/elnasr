@@ -72,7 +72,10 @@ const potogas = [
     { name: "غسالة سامسونج", desc: "ديجيتال إنفرتر حديثة", img: "imgs/dashboard.PNG" }
 ];
 
-
+const matbakh = [
+    { name: "كنكه قهوه كهربا ", desc: " HOOR ماركة, 800 وات", img: "imgs/للمطبخ/كنكه قهوه .jpeg"},
+    { name: "غسالة سامسونج", desc: "ديجيتال إنفرتر حديثة", img: "imgs/dashboard.PNG" }
+];
 const shashah = [
     { name: "شاشة LG ", desc: "شاشه ال جي 65 بوصه سمارت 4k,حجم الشاشة: 65 بوصة,تقنية الشاشة: LED,درجة الوضوح: Ultra HD 4K.الدقة: 3840 × 2160,مواصفات الشاشة:* مزودة بريسيفر داخلي 4K* معالج رباعي النواة Quad Core* بحث صوتي باللغة العربية و الإنجليزية* أتصال بالأجهزة الذكية (IOS , Android )* نظام التشغيل Web OS* أتصال Bluetooth* تطبيق Smart ThinQ* تطبيق LG TV Plus* متصفح الويب* مشغل الموسيقي المداخل والمخارج:* 3 مداخل HDMI* 2 مدخل USB* مدخل RF* مخرج سماعة الرأس* مخرج الصوت الرقمي البصري Optical Audio* مدخل AV,الأتصال بالأنترنت:* أتصال سلكي LAN* أتصال لاسلكي Wifi,ملحقات الجهاز:* البطاريات* كابل الطاقة* شهادة الضمان, دليل المستخدم", img: "imgs/شاشات/شاشه ال جي 65 بوصه سمارت .jpeg"},
     { name: "غسالة سامسونج", desc: "ديجيتال إنفرتر حديثة", img: "imgs/dashboard.PNG" }
@@ -120,6 +123,7 @@ window.onload = () => {
     displayProducts(washersData, 'washers-container');
     displayProducts(potogas, 'potogas');
     displayProducts(shashah, 'shashah');
+    displayProducts(matbakh, 'matbakh');
 
     displayProducts(phonesData, 'phones-container');
 };
