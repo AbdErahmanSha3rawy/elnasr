@@ -183,8 +183,8 @@ transition: 0.3s;
 
 .project:hover {
   transform: translateY(-10px);
-  
 }
+
 .wa_link{
     display: flex;
     align-items: center;
@@ -222,6 +222,11 @@ transition: 0.3s;
   height: 70px;
   text-align: right;
     overflow-y: scroll;
+
+}
+.project p:hover {
+    height: auto;
+
 
 }
 .project p::-webkit-scrollbar{
