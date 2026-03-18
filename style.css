@@ -106,7 +106,7 @@ display: none;
     height: 100vh;
     background-color: #111411;
     scroll-behavior: smooth;
-    padding-top: 10px;
+    padding-top: 1px;
    
 }
 .hello{
@@ -114,13 +114,17 @@ display: none;
     font-size: 60px;
     padding-left: 10px;
     width: auto;
-
+    height: 100%;
     white-space: pre-wrap;
     color: #eef095;
-    background-color: #040c1f21;
-
+    background-color: #040c1f59;
+    
 }
-
+.sectionbtn{
+    width: 90%;
+    border: none;
+    background: none;
+}
 .ourproducts{
     width: 170px;
     height: 50px;
@@ -129,9 +133,10 @@ display: none;
     align-content: center;
     text-align: center;
     font-size: x-large;
-    color: black;
-    background-color:rgba(33, 247, 5, 0.514);
+color: #3552f7;
+
     border-radius: 5px;
+    font-size: 50px;
 
 }
 
@@ -147,9 +152,8 @@ background-image: linear-gradient(150deg,#b0b8be,#bec1c4,hsl(241, 68%, 79%));
 .products-grid {
   justify-content: right;
 display: grid;
-grid-template-columns: repeat(4,1fr);
+grid-template-columns: repeat(5,1fr);
 gap: 10px;
-/* height: 250px;  */
 overflow: hidden;
 transition: 0.3s;
   direction: rtl;
@@ -170,9 +174,9 @@ transition: 0.3s;
 .project a{
     font-size: 25px;
     text-decoration: none;
-    color: #111411;
-    background-color: #45ec02a6;
-    border: rgb(60, 243, 14) 2px solid;
+    color: #000000;
+    background-color: #eaf0ea;
+    border: rgb(101, 212, 73) 2px solid;
     width: 90%;
     display: inline-flex;
     height: auto;
@@ -180,7 +184,11 @@ transition: 0.3s;
     text-align: center;
 
 }
+.project a:hover{
 
+background-color: rgb(58, 238, 34);
+transition-duration: 3s;
+}
 .project:hover {
   transform: translateY(-10px);
 }
@@ -224,11 +232,7 @@ transition: 0.3s;
     overflow-y: scroll;
 
 }
-.project p:hover {
-    height: auto;
 
-
-}
 .project p::-webkit-scrollbar{
     display: none;
 }
@@ -246,9 +250,7 @@ transition: 0.3s;
 .product_name{
     text-align: right;
     font-size: 25px;
-    color: transparent;
-background-clip: text;
-background-image: linear-gradient(150deg,#3509f8,#5f9ff1,hsl(241, 94%, 56%));
+color: #3552f7;
 margin-top: -17px;
 
 }
@@ -256,42 +258,16 @@ margin-top: -17px;
 display: flex   ;
 width: 250px;
 height: 50px;
-justify-self: center;
+justify-self: end;
 align-items: center;
 justify-content: center;
     background-color: #5f8cec;
 font-size: 35px;
 color:white;
 border-radius: 3px;
-    animation-name: part_name;
-    animation-iteration-count: infinite;
-    animation-duration: 7s;
-    animation-timing-function: linear;
-    animation-direction:normal;
-}
-@keyframes part_name {
-0%{
-    translate: -500px
+  
 }
 
-100%{
-    translate: 500px;
-    transition: linear;
-}
-}
-.showall{
-    display: flex;
-    width: auto;
-    height: auto;
-    border: none;
-    font-size: 30px;
-    background: none;
-    
-}
-.showall:hover{
-background-color: #ffeded;
-cursor: pointer;
-}
 
 #contact img{
     width: 60px;
@@ -315,7 +291,7 @@ cursor: pointer;
 #contact .facebook{
     position: fixed;
     bottom: 8px;
-  left: 90px;
+  right: 20px;
     z-index: 1000;
 }
 
@@ -323,64 +299,6 @@ cursor: pointer;
 @media (max-width: 600px) {
     
  
-    body{
-    overflow-x: hidden;
-}
-nav{
-    
-    overflow-x:hidden;
-    
-    display: block;
-    height: 60px;
-    padding: 10px;
-    position: sticky;
-    z-index: 600;
-    top:0;
-}
-
-nav ul span{
-font-size: 30px;
-
-}
-.menubtn{
-    display: flex;
-    margin-right: 20px;
-    border: none;
-    background: none;
-    font-size: 25px;
-}
-.links{
-    gap: 10px;
-    margin-right: 10px;
-    display: none;
-}
-.newlinks{
-    display: block;
-    text-align: center;
-       position: sticky;
-    z-index: 600;
-    top:0;
-    
-}
-.newlinks li a{
-    color: rgb(249, 250, 252);
-    background-color: #6090f7;
-    font-size: 30px;
-     border: none;
-     width: 90%;
-     justify-self: center;
-     margin-bottom: 10px;
-     border-radius: 15px;
-}
-nav a{
-  
-    font-size: 25px;
-    display: block;
-
-}
-
-
-
 
 .hello{
     font-size: 45px;
@@ -388,12 +306,7 @@ nav a{
 
 }
 
-.products-grid {
-width: 100%;
-grid-template-columns: repeat(2,1fr);
-gap: 3px;
 
-}
 
 .project {
  
@@ -401,8 +314,12 @@ gap: 3px;
   transition: 0.4s;
  
 }
+.project:hover {
+
+transform: translateY(0);
+}
 .project a{
-    font-size: 15px;
+    font-size: 20px;
   
     width: 100%;
   
@@ -452,13 +369,127 @@ h3{
     display: none;
 }
 .part_name{
-    background-color: rgb(166, 169, 247);
-}
-@keyframes part_name {
-0%{
+    background-color: rgb(90, 96, 248);
+    justify-self: end;
 }
 
-100%{
+}
+@media (max-width: 300px) {
+
+.products-grid {
+
+grid-template-columns: repeat(1,1fr);
+
+
+}
+.part_name{
+    margin-right:0;
 }
 }
+@media (min-width: 301px) and (max-width: 440px) {
+
+.products-grid {
+
+grid-template-columns: repeat(2,1fr);
+gap: 3px;
+
+}
+}
+@media (max-width: 1000px) {
+
+    body{
+    overflow-x: hidden;
+}
+nav{
+    
+    overflow-x:hidden;
+    
+    display: block;
+    height: 60px;
+    padding: 10px;
+    position: sticky;
+    z-index: 600;
+    top:0;
+}
+
+nav ul span{
+font-size: 30px;
+
+}
+.menubtn{
+    display: flex;
+    margin-right: 20px;
+    border: none;
+    background: none;
+    font-size: 25px;
+}
+.links{
+    gap: 10px;
+    margin-right: 10px;
+    display: none;
+}
+.newlinks{
+    display: block;
+    text-align: center;
+       position: sticky;
+    z-index: 600;
+    top:0;
+    
+}
+.newlinks li a{
+    color: rgb(249, 250, 252);
+    background-color: #6090f7;
+    font-size: 30px;
+     border: none;
+     width: 100%;
+     font-family: sans-serif;
+     font-weight: bolder;
+     justify-self: center;
+     margin-bottom: 10px;
+     border-radius: 10px;
+}
+nav a{
+  
+    font-size: 25px;
+    display: block;
+
+}
+
+
+
+
+
+}
+@media (min-width: 441px) and (max-width: 660px) {
+
+.products-grid {
+
+grid-template-columns: repeat(3,1fr);
+gap: 3px;
+
+}
+
+}
+@media (min-width: 661px) and (max-width: 870px) {
+
+.products-grid {
+
+grid-template-columns: repeat(3,1fr);
+gap: 3px;
+
+}
+
+
+}
+
+@media (min-width: 871px) and (max-width: 1250px) {
+
+.products-grid {
+
+grid-template-columns: repeat(4,1fr);
+gap: 3px;
+
+}
+
+
 }

@@ -1,11 +1,13 @@
 let menu_icon=document.querySelector(".menubtn");
+let sectionbtn=document.querySelector('.sectionbtn');
+
+
 let newlinks=document.querySelector(".newlinks");
 let elaicona=document.querySelector(".elaicona");
 let nav=document.querySelector(".nav");
 
-
-menu_icon.onclick = function() {
-    elaicona.style.transition = "opacity 0.3s";
+function new_links(){
+ elaicona.style.transition = "opacity 0.3s";
     elaicona.style.opacity = 0;
 
     setTimeout(() => {
@@ -22,6 +24,17 @@ menu_icon.onclick = function() {
 
         elaicona.style.opacity = 1;
     }, 400); 
+
+}
+
+
+menu_icon.onclick = function() {
+   new_links();
+}
+
+
+sectionbtn.onclick = function() {
+   new_links();
 }
 
 
