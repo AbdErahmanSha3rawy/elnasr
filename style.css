@@ -157,7 +157,9 @@ gap: 10px;
 overflow: hidden;
 transition: 0.3s;
   direction: rtl;
+   
 }
+
 .products-grid.collapsed
 .project:nth-child(n+5){
     display: none;
@@ -169,7 +171,14 @@ transition: 0.3s;
   transition: 0.4s;
    border: 1px solid #1e2127;
   box-shadow: 1px 1px 3px rgb(52, 52, 53);
+  opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
   
+}
+.project.show-row {
+    opacity: 1;
+    transform: translateY(0);
 }
 .project a{
     font-size: 25px;

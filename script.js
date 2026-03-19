@@ -1,10 +1,12 @@
 let menu_icon=document.querySelector(".menubtn");
-let sectionbtn=document.querySelector('.sectionbtn');
-
+const sectionbtn = document.querySelectorAll('.sectionbtn');
 
 let newlinks=document.querySelector(".newlinks");
 let elaicona=document.querySelector(".elaicona");
 let nav=document.querySelector(".nav");
+
+
+
 
 function new_links(){
  elaicona.style.transition = "opacity 0.3s";
@@ -33,9 +35,15 @@ menu_icon.onclick = function() {
 }
 
 
-sectionbtn.onclick = function() {
+sectionbtn.forEach((btn) => {
+    
+    btn.addEventListener('click', function() {
    new_links();
-}
+
+        this.style.backgroundColor = "lightblue"; 
+    });
+});
+
 
 
 const textElement=document.querySelector('.hello');
@@ -108,36 +116,63 @@ const phonesData = [
 // 2. دالة عرض المنتجات
 function displayProducts(dataArray, containerId) {
     const container = document.getElementById(containerId);
-    const phoneNumber = "201201250074"; // رقم واتساب العميل (معرض النصر)
+    if (!container) return;
+
+    const phoneNumber = "201201250074";
+    let allCardsHTML = ""; 
 
     dataArray.forEach(product => {
-        const message = encodeURIComponent(`أهلاً معرض النصر، أريد الاستفسار عن: ${product.name}`);
+        const message = encodeURIComponent( `أهلاً معرض النصر، أريد الاستفسار عن: ${product.name}`);
         
-        const cardHTML = `
+        // الـ div هنا واخد كلاس project وده اللي هنراقبه
+        allCardsHTML +=  `
             <div class="project">
                 <img src="${product.img}" alt="${product.name}">
                 <div class="info">
                     <h3 class="product_name">${product.name}</h3>
                     <p>${product.desc}</p>
                     <a href="https://wa.me/${phoneNumber}?text=${message}" target="_blank" class="wa_link">
-    <img src="imgs/whatsapp .png" alt="" class="whatsapp">
+                        <img src="imgs/whatsapp .png" alt="" class="whatsapp">
                         اطلب الآن  
                     </a>
                 </div>
-            </div>
-        `;
-        container.innerHTML += cardHTML;
+            </div> `
+        ;
     });
+
+    container.innerHTML = allCardsHTML;
 }
 
-// 3. تشغيل الدالة لكل قسم عند تحميل الصفحة
+// دالة المراقبة
+function startObserving() {
+    const allProjects = document.querySelectorAll('.project');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show-row');
+            } else {
+                // عشان يختفي ويرجع يظهر تاني لما تطلع وتنزل
+                entry.target.classList.remove('show-row');
+            }
+        });
+    }, { 
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px" // بيخلي الصف يظهر تِباعاً
+    });
+
+    allProjects.forEach(p => observer.observe(p));
+}
+
 window.onload = () => {
+    // عرض البيانات في كل الحاويات اللي في الـ HTML بتاعك
     displayProducts(fridgeData, 'refrigerators-container');
     displayProducts(washersData, 'washers-container');
     displayProducts(potogas, 'potogas');
     displayProducts(shashah, 'shashah');
     displayProducts(matbakh, 'matbakh');
-
     displayProducts(phonesData, 'phones-container');
-};
 
+    // تشغيل الأنيميشن بعد ما العناصر تترسم
+    startObserving();
+};
