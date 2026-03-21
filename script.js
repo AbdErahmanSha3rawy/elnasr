@@ -16,7 +16,7 @@ function new_links(){
         if(newlinks.style.display === "block"){
             newlinks.style.display = "none";
             elaicona.src = 'imgs/menu.svg';
-            nav.style.height="60px";
+            nav.style.height="30px";
 
         } else {
             newlinks.style.display = "block";
